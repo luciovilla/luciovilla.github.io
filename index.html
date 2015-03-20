@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Tools & Resources for Data Journalists - Migrahack 2015</title>
+
+		<meta name="description" content="Learn about tools and resources for finding data, visualizing data and building web interactives. This workshop will introduce you to data portals, scrapping data, data visualization tools and JavaScript tools for journalists.">
+		<meta name="author" content="Lucio Villa">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Tools & Resources for Data Journalists</h1>
+					<h3>Migrahack 2015</h3>
+					<p>
+						<small>Presented by <a href="http://www.luciovilla.com">Lucio Villa</a> / <a href="http://twitter.com/luciovilla">@luciovilla</a></small>
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h1>Obtaining Data</h1>
+					</section>
+				</section>
+
+				<section>
+					<h2>Data Portals</h2>
+					<p>
+						Portals are collections of freely available data and tools. They provide data dashboards on various topics containing tables, charts and maps.
+					</p>
+					<p>
+						A large number of cities, counties and states have open data sites.
+					</p>
+				</section>
+
+				<section>
+					<h2>DATA.GOV</h2>
+					<p>
+						Data.gov is the home of the U.S. Government's open data. The site is maintained by the U.S. <a target="_blank" href="http://www.gsa.gov/portal/category/100000">General Services Administration.</a>
+					</p>
+					<p>
+						This is great place to start looking for cities, counties or states with data portals. You can quickly find and download data right away. Lets check out some data portals: <a target="_blank" href="http://www.data.gov/open-gov/">www.data.gov</a>
+					</p>
+
+					<aside class="notes">
+						- Lets see if Tucson has a data portal...
+						- How about Arizona... ahh yes they do.
+						- Check out Chicago's Data Portal
+					</aside>
+				</section>
+
+				<section>
+					<h2>Census Reporter</h2>
+					<p>Census Reporter is designed to provide journalists with a simpler way to access Census data so they can spend less time importing and managing the data and more time exploring and reporting the data.</p>
+					<p>
+						Lets check it out: <a target="_blank" href="http://censusreporter.org/">www.censusreporter.org</a>
+					</p>
+
+					<aside class="notes">
+						Great site for Census data. Easier to use than the U.S. Census site. This site uses The Census American Community Survey (ACS)which is a mandatory, ongoing statistical survey that samples a small percentage of the population every year. Watch out for margin of errors.
+					</aside>
+				</section>
+
+				<section>
+					<h1>SCRAPING DATA</h1>
+					<p>Your city has no data portal and you want data now!</p>
+
+					<aside class="notes">
+						So data is not readily available due to lack of data portals. Lets go hunt for data.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Google</h2>
+					<p>Use Google Search Advance search option to look for specific filetypes in specific sites. The search below will look for XLS files in the State of Arizona's website.</p>
+					<pre><code data-trim>
+						site:az.gov filetype:xls
+				    </code></pre>
+
+					<aside class="notes">
+						So data is not readily available due to lack of data portals. Lets go hunt for data.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Scrappy</h2>
+					<p>Scraper is a simple data mining extension for Google Chrome that is useful for online research when you need to quickly scrape data from a site.</p>
+					<p>Download it: <a target="_blank" href="https://chrome.google.com/webstore/detail/scraper/mbigbapnjcgaffohmbkdlecaccepngjd">Scraper</a></p>
+					<p>Lets try it here: <a target="_blank" href="http://www.azsos.gov/elections/voter-registration-historical-election-data">at Arizona's Secretary of State website.</a></p>
+
+					<aside class="notes">
+						Great tool to quickly grab data from tables, especially when the website does not provide raw data in the form of CSV/XLS files.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Import.io</h2>
+					<p>Its a tool that can scrape websites and turns them into a structured API in minutes.</p>
+					<p>Site: <a target="_blank" href="http://import.io">Import.io</a></p>
+					<p>Lets use this site:</p>
+					<code><pre>http://apps.azsos.gov/election/2014/General/fulllisting.htm</code></pre>
+
+					<aside class="notes">
+						An application-programming interface (API) is a set of programming instructions and standards for accessing a Web-based software application or Web tool. It uses magic.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Cometdocs</h2>
+					<p>Convert your PDF files to Word, Excel, PowerPoint and more. Its easy to use, fast and free (limited to 5 conversions per week).</p>
+					<p>Site: <a target="_blank" href="http://www.cometdocs.com/">www.cometdocs.com</a> <br><a target="_blank" href="http://tabula.technology/">Tabula</a> is also a great tool to use.</p>
+
+					<aside class="notes">
+						website to scrape data from PDFs. no programs to install. no coding involved. There is also Python, if you know more coding.
+					</aside>
+				</section>
+
+				<section>
+					<h2>pre-FOIA(ing)</h2>
+					<p>Look into FOIA logs, what have others requested. Lets look at some FOIA logs from <a target="_blank" href="http://www.dhs.gov/publication/privacy-office-january-2015-foia-log">DHS</a></p>
+					<p>FOIA officers: These people will be your close friend after bugging them contstantly. Lets find out who are the FOIA officers for the <a target="_blank" href="http://www.foia.gov/report-makerequest.html">Federal Departments</a></p>
+
+					<aside class="notes">
+						Get some ideas from other FOIA logs and request that data in your state/city. Or even request the same data. Google FOIA logs to find more. FOIA officers are the FOIA experts and can help you file a FOIA, they are knowledgeable of the data, in case you dont know how their data is stored.
+					</aside>
+				</section>
+
+				<section>
+					<h2>FOIA(ING)</h2>
+					<p><a target="_blank" href="http://foiamachine.org">FOIA Machine</a> is a great site to keep track of your FOIA requests.</p>
+					<p>The National Freedom of Information Coalition (NFIC): is a great resource for helping you with FOIAs. Lets see who we can reach out to for help in <a target="_blank" href="http://www.nfoic.org/state-foi-resources">Arizona</a></p>
+
+					<aside class="notes">
+						A lot of organizations have online forms where you can file for a FOIA request. It would suck if you received an answer from your FOIA request and you missed it because of all the other emails you get in your inbox. FOIA Machine keeps your data private unless you want to open-source it. NFIC has list of contacts that you can reach out to for help.
+					</aside>
+				</section>
+
+				<section>
+					<section>
+						<h1>Visualizing Data</h1>
+						<aside class="notes">Now we have data. Lets do something with it! There are a ton of data visualization tools out there. Most of them require more coding and time for setting up a computer</aside>
+					</section>
+				</section>
+
+				<section>
+					<h2>Google Charts</h2>
+					<ul>
+						<li>Interactive</li>
+						<li>Little bit of coding invovled</li>
+						<li>Recommended for visualizations with small data</li>
+						<li>Lets try it: <a target="_blank" href="https://developers.google.com/chart">Google Charts</a></li>
+					</ul>
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h2>Data Wrapper</h2>
+					<ul>
+						<li>Its Free!</li>
+						<li>No coding involved</li>
+						<li>You can upload your own CSV file</li>
+						<li>Lets try it: <a target="_blank" href="https://datawrapper.de">Data Wrapper</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h1>Web Interactive Tools</h1>
+					</section>
+				</section>
+
+				<section>
+					<h2>StoryMap.JS</h2>
+					<p>StoryMap.js is a free tool to help you tell stories on the web that highlight the locations of a series of events.</p>
+					<p>Lets try it: <a target="_blank" href="http://storymap.knightlab.com/">StoryMap.js</a></p>
+				</section>
+
+				<section>
+					<h2>Snapmap.js</h2>
+					<p>SnapMap is a feature of StoryMap.js. It places a user's 20 most recent geo-tagged Instagrams on a map that can be shared instantly.</p>
+					<p>Lets try it: <a target="_blank" href="http://snapmap.knightlab.com/#top">SnapMap.js</a></p>
+				<aside class="notes">Ask for someones instagram account who has geo located turned on</aside>
+				</section>
+
+				<section>
+					<h2>Timeline.js</h2>
+					<p>Timeline.js is an open-source tool that allows publishers to quickly and easily create interactive, media-rich timelines using nothing more than a Google Spreadsheet.</p>
+					<p>Lets try it: <a target="_blank" href="http://timeline.knightlab.com/">Timeline.js</a></p>
+				</section>
+
+				<section>
+					<h2>SoundCite</h2>
+					<p>SoundCite is a simple-to-use tool that lets you add inline audio to your story.</p>
+					<p>Lets try it: <a target="_blank" href="http://soundcite.knightlab.com/">SoundCite</a></p>
+				</section>
+
+				<section>
+					<h2>juxtapose.js</h2>
+					<p>Juxtapose.js helps storytellers compare two pieces of similar media, including photos, and gifs.</p>
+					<p>Lets try it: <a target="_blank" href="http://juxtapose.knightlab.com/">Juxtapose.js</a></p>
+					<aside class="notes">It’s ideal for highlighting then/now stories that explain slow changes over time (grown of a city skyline, regrowth of a forest, etc.) or before/after stories that show the impact of single dramatic events (natural disasters, protests, wars, etc.).</aside>
+				</section>
+
+				<section>
+					<h2>Creatavist</h2>
+					<p>Creatavist is website, like Medium, that helps you to tell beautiful stories composed of text, images, video, maps and more</p>
+					<p>Lets check out some examples: <a target="_blank" href="https://www.creatavist.com/featured">Creatavist</a></p>
+					<aside class="notes">There is a price. Easy to use.</aside>
+				</section>
+
+
+
+
+				<section style="text-align: left;" id="final">
+					<img data-src="https://pbs.twimg.com/media/B8PBTZIIMAAm15F.jpg">
+					<p>
+						Email: contact@luciovilla.com <br>
+						Twitter: @luciovilla<br>
+						Link to this slideshow: bit.ly/migrahack2015
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
